@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{b82c0ac8-08ad-4e87-bc64-4aba89545f29}</ProjectGuid>
+    <RootNamespace>uefiparser</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\DevTools\boost_1_79_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\DevTools\boost_1_79_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\DevTools\boost_1_79_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\DevTools\boost_1_79_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\DevTools\boost_1_79_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\DevTools\boost_1_79_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\DevTools\boost_1_79_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\DevTools\boost_1_79_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="common\bstrlib\bstrlib.c" />
+    <ClCompile Include="common\bstrlib\bstrwrap.cpp" />
+    <ClCompile Include="common\descriptor.cpp" />
+    <ClCompile Include="common\ffs.cpp" />
+    <ClCompile Include="common\ffsbuilder.cpp" />
+    <ClCompile Include="common\ffsops.cpp" />
+    <ClCompile Include="common\ffsparser.cpp" />
+    <ClCompile Include="common\ffsreport.cpp" />
+    <ClCompile Include="common\ffsutils.cpp" />
+    <ClCompile Include="common\guiddatabase.cpp" />
+    <ClCompile Include="common\LZMA\LzmaCompress.c" />
+    <ClCompile Include="common\LZMA\LzmaDecompress.c" />
+    <ClCompile Include="common\LZMA\SDK\C\Bra86.c" />
+    <ClCompile Include="common\LZMA\SDK\C\LzFind.c" />
+    <ClCompile Include="common\LZMA\SDK\C\LzmaDec.c" />
+    <ClCompile Include="common\LZMA\SDK\C\LzmaEnc.c" />
+    <ClCompile Include="common\meparser.cpp" />
+    <ClCompile Include="common\nvram.cpp" />
+    <ClCompile Include="common\nvramparser.cpp" />
+    <ClCompile Include="common\peimage.cpp" />
+    <ClCompile Include="common\sha256.c" />
+    <ClCompile Include="common\Tiano\EfiTianoCompress.c" />
+    <ClCompile Include="common\Tiano\EfiTianoCompressLegacy.c" />
+    <ClCompile Include="common\Tiano\EfiTianoDecompress.c" />
+    <ClCompile Include="common\treeitem.cpp" />
+    <ClCompile Include="common\treemodel.cpp" />
+    <ClCompile Include="common\types.cpp" />
+    <ClCompile Include="common\ustring.cpp" />
+    <ClCompile Include="common\utility.cpp" />
+    <ClCompile Include="common\zlib\adler32.c" />
+    <ClCompile Include="common\zlib\compress.c" />
+    <ClCompile Include="common\zlib\crc32.c" />
+    <ClCompile Include="common\zlib\deflate.c" />
+    <ClCompile Include="common\zlib\gzclose.c" />
+    <ClCompile Include="common\zlib\gzlib.c" />
+    <ClCompile Include="common\zlib\gzread.c" />
+    <ClCompile Include="common\zlib\gzwrite.c" />
+    <ClCompile Include="common\zlib\infback.c" />
+    <ClCompile Include="common\zlib\inffast.c" />
+    <ClCompile Include="common\zlib\inflate.c" />
+    <ClCompile Include="common\zlib\inftrees.c" />
+    <ClCompile Include="common\zlib\trees.c" />
+    <ClCompile Include="common\zlib\uncompr.c" />
+    <ClCompile Include="common\zlib\zutil.c" />
+    <ClCompile Include="imageinfo.cpp" />
+    <ClCompile Include="uefiparser_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="center_helper.h" />
+    <ClInclude Include="common\basetypes.h" />
+    <ClInclude Include="common\bootguard.h" />
+    <ClInclude Include="common\bstrlib\bstrlib.h" />
+    <ClInclude Include="common\bstrlib\bstrwrap.h" />
+    <ClInclude Include="common\descriptor.h" />
+    <ClInclude Include="common\ffs.h" />
+    <ClInclude Include="common\ffsbuilder.h" />
+    <ClInclude Include="common\ffsops.h" />
+    <ClInclude Include="common\ffsparser.h" />
+    <ClInclude Include="common\ffsreport.h" />
+    <ClInclude Include="common\ffsutils.h" />
+    <ClInclude Include="common\filesystem.h" />
+    <ClInclude Include="common\fit.h" />
+    <ClInclude Include="common\gbe.h" />
+    <ClInclude Include="common\guiddatabase.h" />
+    <ClInclude Include="common\LZMA\LzmaCompress.h" />
+    <ClInclude Include="common\LZMA\LzmaDecompress.h" />
+    <ClInclude Include="common\LZMA\SDK\C\7zVersion.h" />
+    <ClInclude Include="common\LZMA\SDK\C\Bra.h" />
+    <ClInclude Include="common\LZMA\SDK\C\CpuArch.h" />
+    <ClInclude Include="common\LZMA\SDK\C\LzFind.h" />
+    <ClInclude Include="common\LZMA\SDK\C\LzHash.h" />
+    <ClInclude Include="common\LZMA\SDK\C\LzmaDec.h" />
+    <ClInclude Include="common\LZMA\SDK\C\LzmaEnc.h" />
+    <ClInclude Include="common\LZMA\SDK\C\Types.h" />
+    <ClInclude Include="common\LZMA\UefiLzma.h" />
+    <ClInclude Include="common\me.h" />
+    <ClInclude Include="common\meparser.h" />
+    <ClInclude Include="common\nvram.h" />
+    <ClInclude Include="common\nvramparser.h" />
+    <ClInclude Include="common\parsingdata.h" />
+    <ClInclude Include="common\peimage.h" />
+    <ClInclude Include="common\sha256.h" />
+    <ClInclude Include="common\Tiano\EfiTianoCompress.h" />
+    <ClInclude Include="common\Tiano\EfiTianoDecompress.h" />
+    <ClInclude Include="common\treeitem.h" />
+    <ClInclude Include="common\treemodel.h" />
+    <ClInclude Include="common\types.h" />
+    <ClInclude Include="common\ubytearray.h" />
+    <ClInclude Include="common\uinttypes.h" />
+    <ClInclude Include="common\ustring.h" />
+    <ClInclude Include="common\utility.h" />
+    <ClInclude Include="common\zlib\crc32.h" />
+    <ClInclude Include="common\zlib\deflate.h" />
+    <ClInclude Include="common\zlib\gzguts.h" />
+    <ClInclude Include="common\zlib\inffast.h" />
+    <ClInclude Include="common\zlib\inffixed.h" />
+    <ClInclude Include="common\zlib\inflate.h" />
+    <ClInclude Include="common\zlib\inftrees.h" />
+    <ClInclude Include="common\zlib\trees.h" />
+    <ClInclude Include="common\zlib\zconf.h" />
+    <ClInclude Include="common\zlib\zlib.h" />
+    <ClInclude Include="common\zlib\zutil.h" />
+    <ClInclude Include="imageinfo.h" />
+    <ClInclude Include="nlohmann\json.hpp" />
+    <ClInclude Include="utilities.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="guids.csv" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
